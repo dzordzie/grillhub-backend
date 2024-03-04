@@ -3,11 +3,10 @@
 
 <img src="#" link alt="logo" width=100 height=100 />
 
-<p>...description soon...</p>
+<p align="center">...description soon...</p>
 
-» [Backend code](https://github.com/dzordzie/grillhub-backend) «
-
-- Frontend repo [Frontend](https://github.com/dzordzie/grillhub-frontend)
+»»» [Backend code](https://github.com/dzordzie/grillhub-backend) «««
+»»» [Frontend code](https://github.com/dzordzie/grillhub-frontend) «««
 
 # :notebook_with_decorative_cover: Table of Contents
 
