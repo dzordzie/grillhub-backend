@@ -1,13 +1,15 @@
 <h1 align="center">GrillHub</h1>
 <h3 align="center">The world's first social network for grillmasters and BBQ enthusiasts.</h3>
 
-<img align="center" src="#" link alt="logo" width=100 height=100 />
 
+<div align="center">
+  
+  <img align="center" src="#" link alt="logo" width=100 height=100 />
 
-
-
-[»»»  BACKEND CODE  «««](https://github.com/dzordzie/grillhub-backend)
-[»»»  FRONTEND CODE  «««](https://github.com/dzordzie/grillhub-frontend)
+  [»»»  BACKEND CODE  «««](https://github.com/dzordzie/grillhub-backend)
+  [»»»  FRONTEND CODE  «««](https://github.com/dzordzie/grillhub-frontend)
+  
+<div/>
 
 
 ## :star2: About the Project
