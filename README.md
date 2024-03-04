@@ -6,18 +6,13 @@
 
 
 
-<p align="center">...description soon...</p>
-
-
-
-
-
-
-»»» [Backend code](https://github.com/dzordzie/grillhub-backend) «««
+ [»»»Backend code](https://github.com/dzordzie/grillhub-backend)«««
 »»» [Frontend code](https://github.com/dzordzie/grillhub-frontend) «««
 
 
 ## :star2: About the Project
+
+<p align="center">...description soon...</p>
 
 ## :compass: Roadmap
 
