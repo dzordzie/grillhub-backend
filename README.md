@@ -6,7 +6,7 @@
 
 
 
- [»»»Backend code](https://github.com/dzordzie/grillhub-backend)«««
+ [»»»  Backend code  «««](https://github.com/dzordzie/grillhub-backend)
 »»» [Frontend code](https://github.com/dzordzie/grillhub-frontend) «««
 
 
