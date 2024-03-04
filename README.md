@@ -1,7 +1,7 @@
 <h1 align="center">GrillHub</h1>
 <h3 align="center">The world's first social network for grillmasters and BBQ enthusiasts.</h3>
 
-<img src="#" link alt="logo" width=100 height=100 />
+<img align="center" src="#" link alt="logo" width=100 height=100 />
 
 
 
