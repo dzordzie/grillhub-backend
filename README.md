@@ -5,7 +5,7 @@
 
 <p>...description soon...</p>
 
-- Backend repo [Backend](https://github.com/dzordzie/grillhub-backend)
+⟫ Backend repo [Backend](https://github.com/dzordzie/grillhub-backend)
 
 - Frontend repo [Frontend](https://github.com/dzordzie/grillhub-frontend)
 
