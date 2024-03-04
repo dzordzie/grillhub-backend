@@ -6,7 +6,6 @@
   
   <img align="center" src="#" link alt="logo" width=100 height=100 />
 
-  [»»»  BACKEND CODE  «««](https://github.com/dzordzie/grillhub-backend)
   [»»»  FRONTEND CODE  «««](https://github.com/dzordzie/grillhub-frontend)
   
 </div>
