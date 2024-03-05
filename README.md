@@ -34,8 +34,9 @@
 
 ## :compass: Roadmap
 
-* [x] user registration - backend
-* [ ] user registration - frontend
+* [x] user registration
+  * [ ] - backend
+  * [ ] - frontend
 * [x] user login -backend
 * [ ] user login - frontend
 * [ ] creating posts - backend
