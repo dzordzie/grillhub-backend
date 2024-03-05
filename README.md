@@ -36,8 +36,8 @@
 
 ✅ User Registration:
   * [x] - backend
-  * [x] - frontend
-<br>
+  * [x] - frontend <br>
+
 ❌ User Login:
   * [ ] - backend
   * [ ] - frontend
