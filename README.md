@@ -37,15 +37,19 @@
 ✅ User Registration:
   * [x] - backend
   * [x] - frontend <br>
+  
 ❌ User Login:
   * [ ] - backend
   * [ ] - frontend <br>
+  
 ❌ Creating Posts:
   * [ ] - backend
   * [ ] - frontend <br>
+  
 ❌ Display of All Posts on the Main Page:
   * [ ] - backend
   * [ ] - frontend <br>
+  
 ❌ CSS Styling
 
 ## :space_invader: Tech Stack
