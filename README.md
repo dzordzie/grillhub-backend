@@ -34,19 +34,23 @@
 
 ## :compass: Roadmap
 
-*✅ User Registration:
+✅ User Registration:
   * [x] - backend
   * [x] - frontend
-*❌ User Login:
+<br>
+❌ User Login:
   * [ ] - backend
   * [ ] - frontend
-*❌ Creating Posts:
+<br>
+❌ Creating Posts:
   * [ ] - backend
   * [ ] - frontend
-*❌ Display of All Posts on the Main Page:
+<br>
+❌ Display of All Posts on the Main Page:
   * [ ] - backend
   * [ ] - frontend
-*❌ CSS Styling
+<br>
+❌ CSS Styling
 
 ## :space_invader: Tech Stack
 
