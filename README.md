@@ -38,9 +38,9 @@
   * [x] - backend
   * [x] - frontend <br>
   
-❌ User Login:
+✅ User Login:
   * [x] - backend
-  * [ ] - frontend <br>
+  * [x] - frontend <br>
   
 ❌ Creating Posts:
   * [ ] - backend
