@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -20,15 +21,15 @@ public class Meat {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private String typeOfCut;
-  private Double weightInKg;
-  private Double internalTemp;
-  private Double ambientTemp;
+  private Integer weightInGrams;
+  private Integer internalTemp;
+  private Integer ambientTemp;
 
   @Enumerated(EnumType.STRING)
   private MeatType meatType;
 
   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinColumn(name = "meat_id")
-  private Set<Meal> meals;
+  private Set<Meal> meals = new HashSet<>();
 
 }

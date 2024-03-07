@@ -16,8 +16,7 @@ public class Spice {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
-  private String typeOfSpice;
-  private Integer weightInGrams;
+  private String name;
 
   @ManyToOne
   @JoinColumn(name = "rub_id")

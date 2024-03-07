@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
@@ -25,14 +24,14 @@ public class Meal {
   private Meat meat;
 
   @ManyToOne
-  @JoinColumn(name = "rub_name")
+  @JoinColumn(name = "rub_id")
   private Rub rub;
 
   @ManyToOne
   @JoinColumn(name = "user_id")
   private User createdBy;
 
-  @CreatedDate
-  private LocalDateTime createdAt;
+  private LocalDateTime createdAt = LocalDateTime.now();
+
 
 }

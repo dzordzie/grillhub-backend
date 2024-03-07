@@ -6,6 +6,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Data
@@ -26,10 +29,10 @@ public class Rub {
 
   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinColumn(name = "rub_id")
-  private Set<Spice> spices;
+  private Set<Spice> spices = new HashSet<>();
 
   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-  @JoinColumn(name = "rub_name")
-  private Set<Meal> meals;
+  @JoinColumn(name = "rub_id")
+  private Set<Meal> meals = new HashSet<>();
 
 }
