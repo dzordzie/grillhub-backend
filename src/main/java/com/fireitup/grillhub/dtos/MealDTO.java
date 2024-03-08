@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -15,5 +17,6 @@ public class MealDTO {
   private String description;
   private MeatDTO meatDTO;
   private RubDTO rubDTO;
-  private UserDTO createdByUserDTO;
+  private UserDTO createdByUser;
+  private LocalDateTime createdAt;
 }

@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class RubDTO {
   private Long id;
   private String name;
-  private UserDTO createdByUserDTO;
+  private UserDTO createdByUser;
 }
