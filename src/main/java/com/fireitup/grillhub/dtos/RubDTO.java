@@ -1,12 +1,16 @@
 package com.fireitup.grillhub.dtos;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
-public class ErrorMessageDTO {
-  private String errorMessage;
+@AllArgsConstructor
+public class RubDTO {
+  private Long id;
+  private String name;
+  private UserDTO createdByUserDTO;
 }

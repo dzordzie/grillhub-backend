@@ -18,7 +18,7 @@ public class Rub {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+  private Long id;
   private String name;
 
   @ManyToOne
