@@ -21,6 +21,8 @@ public class Meal {
 
   private String name;
 
+  @Lob
+  @Column(columnDefinition="TEXT")
   private String description;
 
   @ManyToOne
