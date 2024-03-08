@@ -19,6 +19,10 @@ public class Meal {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
 
+  private String name;
+
+  private String description;
+
   @ManyToOne
   @JoinColumn(name = "meat_id")
   private Meat meat;
