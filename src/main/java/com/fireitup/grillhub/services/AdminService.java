@@ -25,7 +25,7 @@ public class AdminService {
   private String adminPassword;
 
   public void initialAdmin() {
-    if (userRepository.findByEmail(adminEmail).isEmpty()) {
+    if (userRepository.findByUsername(adminName).isEmpty()) {
       User admin = User.builder()
           .username(adminName)
           .email(adminEmail)

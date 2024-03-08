@@ -16,7 +16,6 @@ public class AuthenticationController {
 
   private final AuthenticationService authenticationService;
 
-
   @PostMapping("/registration")
   public ResponseEntity<SuccessMessageDTO> register(@Valid @RequestBody RegisterRequestDTO request) {
     this.authenticationService.register(request);

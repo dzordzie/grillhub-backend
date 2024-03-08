@@ -28,6 +28,10 @@ public class AuthenticationService {
       throw new CustomException("Email is already in use");
     }
 
+    if (this.userRepository.existsByUsername(request.getUsername())) {
+      throw new CustomException("Username is already in use");
+    }
+
     User user = User.builder()
         .username(request.getUsername())
         .email(request.getEmail())
@@ -40,11 +44,11 @@ public class AuthenticationService {
   public AuthenticationResponse authenticate(AuthenticationRequest request) {
     authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(
-            request.getEmail(),
+            request.getUsername(),
             request.getPassword()
         )
     );
-    User user = userRepository.findByEmail(request.getEmail())
+    User user = userRepository.findByUsername(request.getUsername())
         .orElseThrow();
     String jwtToken = jwtService.generateToken(Map.of("role", user.getRole()), user);
     return AuthenticationResponse.builder()
