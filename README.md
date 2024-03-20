@@ -10,7 +10,7 @@
   <br>
   <br>
 
-[»»» BACKEND CODE «««](https://github.com/dzordzie/grillhub-backend)
+[»»» FRONTEND CODE «««](https://github.com/dzordzie/grillhub-frontend)
 
 </div>
 
