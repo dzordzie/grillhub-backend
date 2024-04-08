@@ -18,5 +18,5 @@ public class MealDTO {
   private MeatDTO meatDTO;
   private RubDTO rubDTO;
   private UserDTO createdByUser;
-  private LocalDateTime createdAt;
+  private String createdAt;
 }
