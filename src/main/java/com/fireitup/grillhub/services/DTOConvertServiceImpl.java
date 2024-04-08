@@ -5,6 +5,9 @@ import com.fireitup.grillhub.entities.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Service
 @RequiredArgsConstructor
 public class DTOConvertServiceImpl implements DTOConvertService {
@@ -28,6 +31,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .id(rub.getId())
         .name(rub.getName())
         .createdByUser(userToDTO(rub.getCreatedBy()))
+        .spices(spiceSetToDTO(rub.getSpices()))
         .build();
   }
 
@@ -54,8 +58,19 @@ public class DTOConvertServiceImpl implements DTOConvertService {
     return SpiceDTO.builder()
         .id(spice.getId())
         .name(spice.getName())
-        .rubDTO(rubToDTO(spice.getRub()))
         .build();
+  }
+
+
+  public Set<SpiceDTO> spiceSetToDTO(Set<Spice> spices){
+    if (spices.isEmpty()) {
+      throw new IllegalArgumentException("Spices cannot be empty");
+    }
+    Set<SpiceDTO> spicesDTO = new HashSet<>();
+    for (Spice spice : spices) {
+      spicesDTO.add(spiceToDTO(spice));
+    }
+    return spicesDTO;
   }
 
 
@@ -70,7 +85,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .meatDTO(meatToDTO(meal.getMeat()))
         .rubDTO(rubToDTO(meal.getRub()))
         .createdByUser(userToDTO(meal.getCreatedBy()))
-        .createdAt(meal.getCreatedAt())
+        .createdAt(meal.getFormattedCreatedAt())
         .build();
   }
 

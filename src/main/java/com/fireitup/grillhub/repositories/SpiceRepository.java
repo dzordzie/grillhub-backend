@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SpiceRepository extends JpaRepository<Spice, Long> {
-
+  Spice findByName(String name);
 }

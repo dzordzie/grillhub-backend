@@ -15,7 +15,7 @@ public class MealController {
 
   private final MealService mealService;
 
-  @GetMapping("/")
+  @GetMapping("/meals")
   public ResponseEntity<List<MealDTO>> getMeals() {
     return ResponseEntity.ok().body(mealService.getAllMeals());
   }

@@ -12,5 +12,4 @@ import lombok.NoArgsConstructor;
 public class SpiceDTO {
   private Long id;
   private String name;
-  private RubDTO rubDTO;
 }

@@ -18,8 +18,4 @@ public class Spice {
   private Long id;
   private String name;
 
-  @ManyToOne
-  @JoinColumn(name = "rub_id")
-  private Rub rub;
-
 }
