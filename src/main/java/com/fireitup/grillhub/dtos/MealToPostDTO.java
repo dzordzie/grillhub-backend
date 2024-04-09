@@ -5,18 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MealDTO {
+public class MealToPostDTO {
   private Long id;
   private String name;
   private String description;
-  private MeatDTO meatDTO;
-  private RubDTO rubDTO;
+  private String meatType;
   private UserDTO createdByUser;
   private String createdAt;
 }

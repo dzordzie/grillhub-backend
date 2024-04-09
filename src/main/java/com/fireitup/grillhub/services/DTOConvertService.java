@@ -12,5 +12,5 @@ public interface DTOConvertService {
 
   SpiceDTO spiceToDTO(Spice spice);
 
-  MealDTO mealToDTO(Meal meal);
+  MealToPostDTO mealToPostToDTO(Meal meal);
 }

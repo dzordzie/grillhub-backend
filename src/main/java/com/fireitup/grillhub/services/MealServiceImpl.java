@@ -1,6 +1,6 @@
 package com.fireitup.grillhub.services;
 
-import com.fireitup.grillhub.dtos.MealDTO;
+import com.fireitup.grillhub.dtos.MealToPostDTO;
 import com.fireitup.grillhub.entities.Meal;
 import com.fireitup.grillhub.repositories.MealRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,11 +17,11 @@ public class MealServiceImpl implements MealService {
   private final DTOConvertService dtoConvertService;
 
   @Override
-  public List<MealDTO> getAllMeals() {
+  public List<MealToPostDTO> getAllMeals() {
     List<Meal> allMeals = mealRepository.findAllMeals();
-    List<MealDTO> allMealsDTO = new ArrayList<>();
+    List<MealToPostDTO> allMealsDTO = new ArrayList<>();
     for (Meal meal : allMeals) {
-      allMealsDTO.add(dtoConvertService.mealToDTO(meal));
+      allMealsDTO.add(dtoConvertService.mealToPostToDTO(meal));
     }
     return allMealsDTO;
   }

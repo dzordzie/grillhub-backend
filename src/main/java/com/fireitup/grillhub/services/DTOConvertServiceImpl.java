@@ -74,16 +74,15 @@ public class DTOConvertServiceImpl implements DTOConvertService {
   }
 
 
-  public MealDTO mealToDTO(Meal meal) {
+  public MealToPostDTO mealToPostToDTO(Meal meal) {
     if (meal == null) {
       throw new IllegalArgumentException("Meal cannot be null");
     }
-    return MealDTO.builder()
+    return MealToPostDTO.builder()
         .id(meal.getId())
         .name(meal.getName())
         .description(meal.getDescription())
-        .meatDTO(meatToDTO(meal.getMeat()))
-        .rubDTO(rubToDTO(meal.getRub()))
+        .meatType(meatToDTO(meal.getMeat()).getMeatType().toString())
         .createdByUser(userToDTO(meal.getCreatedBy()))
         .createdAt(meal.getFormattedCreatedAt())
         .build();

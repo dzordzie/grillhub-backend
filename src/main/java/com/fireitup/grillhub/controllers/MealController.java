@@ -1,6 +1,6 @@
 package com.fireitup.grillhub.controllers;
 
-import com.fireitup.grillhub.dtos.MealDTO;
+import com.fireitup.grillhub.dtos.MealToPostDTO;
 import com.fireitup.grillhub.services.MealService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class MealController {
   private final MealService mealService;
 
   @GetMapping("/")
-  public ResponseEntity<List<MealDTO>> getMeals() {
+  public ResponseEntity<List<MealToPostDTO>> getMeals() {
     return ResponseEntity.ok().body(mealService.getAllMeals());
   }
 
