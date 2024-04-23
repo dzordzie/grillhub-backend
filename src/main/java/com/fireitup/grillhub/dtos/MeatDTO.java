@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MeatDTO {
-  private Long id;
   private String typeOfCut;
   private Integer weightInGrams;
   private Integer internalTemp;
