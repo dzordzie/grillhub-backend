@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class SuccessMessageDTO {
 
-  private String successMessage;
+  private String message;
 }
