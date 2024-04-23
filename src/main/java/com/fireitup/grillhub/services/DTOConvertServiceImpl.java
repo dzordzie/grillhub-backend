@@ -43,6 +43,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
     return RubInMealsDTO.builder()
         .name(rub.getName())
         .createdByUser(userToDTO(rub.getCreatedBy()))
+        .spices(spiceSetToDTO(rub.getSpices()))
         .meals(setOfMealNameAndIdToDTO(rub.getMeals()))
         .build();
   }

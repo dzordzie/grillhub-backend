@@ -14,5 +14,6 @@ import java.util.Set;
 public class RubInMealsDTO {
   private String name;
   private UserDTO createdByUser;
+  private Set<SpiceDTO> spices;
   private Set<MealNameAndIdDTO> meals;
 }
