@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class SpiceDTO {
-  private Long id;
   private String name;
+  private Integer weightInGrams;
 }
