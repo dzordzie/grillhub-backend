@@ -22,28 +22,25 @@
   <br>
 
   <h3>Become a Grill Guru:</h3>
-- Sign up with a secure password.
-- Dive into a world of recipes – create detailed posts featuring your grilling masterpieces.
-- Craft mouthwatering rubs with customizable spice options.
-
-  <br>
-
-  <strong>The Grill Master Community Awaits:<strong/>
-
-  <br>
   
-- Browse a library of recipes and rubs from fellow grilling enthusiasts.
-- Edit and delete your own creations as you perfect your craft.
-- Rate and dish out kudos on other users' culinary triumphs.
+  - Sign up with a secure password.
+  - Dive into a world of recipes – create detailed posts featuring your grilling masterpieces.
+  - Craft mouthwatering rubs with customizable spice options.
+
+  <br>
+
+  <h3>The Grill Master Community Awaits:</h3>
+  
+  - Browse a library of recipes and rubs from fellow grilling enthusiasts.
+  - Edit and delete your own creations as you perfect your craft.
+  - Rate and dish out kudos on other users' culinary triumphs.
   
   <br>
 
-  <strong>Tech Stack to Keep Things Smokin':<strong/>
+  <h3>Tech Stack to Keep Things Smokin':</h3>
 
-  <br>
-  
-- Backend: Java, Spring Framework, Gradle, JPA Hibernate, MySQL Database, JWT Token, Role based authorization and authentication (keeping all the recipes safe!)
-- Frontend: JavaScript, HTML, CSS, React (for a sizzling user experience)
+  - Backend: Java, Spring Framework, Gradle, JPA Hibernate, MySQL Database, JWT Token, Role based authorization and authentication (keeping all the recipes safe!)
+  - Frontend: JavaScript, HTML, CSS, React (for a sizzling user experience)
 
   <br>
   <br>
