@@ -3,7 +3,6 @@ package com.fireitup.grillhub.services;
 import com.fireitup.grillhub.dtos.RubDTO;
 import com.fireitup.grillhub.dtos.RubInMealsDTO;
 import com.fireitup.grillhub.entities.Rub;
-import com.fireitup.grillhub.exceptions.MealNotFoundException;
 import com.fireitup.grillhub.exceptions.RubNotFoundException;
 import com.fireitup.grillhub.repositories.RubRepository;
 import lombok.RequiredArgsConstructor;
