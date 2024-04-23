@@ -36,21 +36,13 @@
   <h3>Tech Stack to Keep Things Smokin':</h3>
 
   - Backend: Java, Spring Framework, Gradle, JPA Hibernate, MySQL Database, JWT Token, Role based authorization and authentication (keeping all the recipes safe!)
-  - Frontend: JavaScript, HTML, CSS, React (for a sizzling user experience)
+  - Frontend: JavaScript, HTML, CSS, React (for a hot user experience)
 
   <br>
   <br>
   
   <img align="center" src="https://github.com/dzordzie/grillhub-frontend/blob/master/src/assets/alpha-styling.jpg" link alt="layout" width=900 height=auto />
 </p>
-
-## :dart: Features
-
-- registration of a new user
-- user login based on roles
-- creating, editing and deleting users posts
-- the post contains the type of meat, used spices, internal and external temperature, weight, picture, procedure and description
-- posts (meals) are displayed on the main page and the user can sort them from newest or oldest
 
 ## :compass: Roadmap
 
