@@ -1,58 +1,102 @@
-<h1 align="center">GrillHub</h1>
-<h4 align="center"> Sparking Up Your Grilling Passion!</h4>
-<p align="center">A sizzling social network for grill masters and BBQ enthusiasts.</p>
+<h1 align="center">GrillHub: A Sizzling Social Network</h1>
+<h4 align="center">⌛...in process...</h3>
+<h3 align="center">The world's first social network for grillmasters and BBQ enthusiasts.</h3>
 
 <div align="center">
 
-  <img align="center" src="https://github.com/dzordzie/grillhub-frontend/blob/master/src/assets/logo1.jpeg" alt="logo" width=450 height=auto />
+  <img align="center" src="https://github.com/dzordzie/grillhub-frontend/blob/master/src/assets/logo1.jpeg" link alt="logo" width=450 height=auto />
 
   <br>
   <br>
   <br>
 
-  [»»» Frontend Code «««](https://github.com/dzordzie/grillhub-frontend)
+[»»» FRONTEND CODE «««](https://github.com/dzordzie/grillhub-frontend)
 
 </div>
 
 ## :star2: About the Project
 
-Inspired by reddit.com, GrillHub is a fun and informative social network where grill masters and BBQ aficionados can come together to share recipes, techniques, and tips. It's a great place to learn new skills, perfect your craft, and connect with fellow grilling enthusiasts!
+<p align="center">
+  GrillHub is my personal project – a social network designed to fire up my passion for grilling and barbecue! It's a place to learn from fellow grill masters, experiment with recipes, and showcase my skills (potential employers, take note!).
+  
+  <br>
 
-**Tech Stack:**
+  <strong>Become a Grill Guru:<strong/>
 
-* Backend: Java, Spring Framework, JPA Hibernate, MySQL Database (keeping all the recipes safe and secure!)
-* Frontend: JavaScript, HTML, CSS, React.js (for a sizzling user experience)
+  <br>
+  
+- Sign up with a secure password.
+- Dive into a world of recipes – create detailed posts featuring your grilling masterpieces.
+- Craft mouthwatering rubs with customizable spice options.
 
-**This project is a personal playground for me to explore the world of grilling and develop my skills as a web developer. Stay tuned for future updates as I add more features and functionality!**
+  <br>
 
-## :dart: Features (Work in Progress)
+  <strong>The Grill Master Community Awaits:<strong/>
 
-* User Registration with secure password protection
-* User Login with role-based authorization
-* Ability to create, edit, and delete your own grilling posts
-* Detailed post creation, including meat selection, spices, temperatures, weights, and instructions
-* Browse a library of recipes and rubs from the GrillHub community
-* Sort and filter posts to find the perfect inspiration
+  <br>
+  
+- Browse a library of recipes and rubs from fellow grilling enthusiasts.
+- Edit and delete your own creations as you perfect your craft.
+- Rate and dish out kudos on other users' culinary triumphs.
+  
+  <br>
+
+  <strong>Tech Stack to Keep Things Smokin':<strong/>
+
+  <br>
+  
+- Backend: Java, Spring Framework, Gradle, JPA Hibernate, MySQL Database, JWT Token, Role based authorization and authentication (keeping all the recipes safe!)
+- Frontend: JavaScript, HTML, CSS, React (for a sizzling user experience)
+
+  <br>
+  <br>
+  
+  <img align="center" src="https://github.com/dzordzie/grillhub-frontend/blob/master/src/assets/alpha-styling.jpg" link alt="layout" width=900 height=auto />
+</p>
+
+## :dart: Features
+
+- registration of a new user
+- user login based on roles
+- creating, editing and deleting users posts
+- the post contains the type of meat, used spices, internal and external temperature, weight, picture, procedure and description
+- posts (meals) are displayed on the main page and the user can sort them from newest or oldest
 
 ## :compass: Roadmap
 
-* ✅ User Registration (both backend and frontend complete)
-* ✅ User Login (both backend and frontend complete)
-* ✅ Display All Posts on Main Page (both backend and frontend complete)
-* ✅ Basic CSS Styling (alpha version complete)
+✅ User Registration:
 
-**Upcoming Features:**
+- [x] - backend
+- [x] - frontend <br>
 
-* Creating and editing posts (backend and frontend in progress)
-* ...and more exciting features to come!
+✅ User Login:
+
+- [x] -   backend
+- [x] -   frontend <br>
+
+✅ Display of All Posts on the Main Page:
+
+- [x] - backend
+- [x] - frontend <br>
+
+✅ Display of specific Post/Meal:
+
+- [x] - backend
+- [x] - frontend <br>
+
+✅ CSS Styling
+
+- [x] - alpha version
+- [ ] - beta version
+- [ ] - final version
+
+❌ Creating Posts:
+
+- [ ] - backend
+- [ ] - frontend <br>
+
+...more things are on the way...
 
 ## :space_invader: Tech Stack
 
-<p align="left"> 
-  <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> 
-  <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> 
-  <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
-  <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> 
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> 
-  <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original
+<p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://spring.io/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40" height="40"/> </a> </p>
