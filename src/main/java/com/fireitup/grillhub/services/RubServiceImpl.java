@@ -1,7 +1,10 @@
 package com.fireitup.grillhub.services;
 
 import com.fireitup.grillhub.dtos.RubDTO;
+import com.fireitup.grillhub.dtos.RubInMealsDTO;
 import com.fireitup.grillhub.entities.Rub;
+import com.fireitup.grillhub.exceptions.MealNotFoundException;
+import com.fireitup.grillhub.exceptions.RubNotFoundException;
 import com.fireitup.grillhub.repositories.RubRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,5 +27,12 @@ public class RubServiceImpl implements RubService {
       allRubsDto.add(dtoConvertService.rubToDTO(rub));
     }
     return allRubsDto;
+  }
+
+  @Override
+  public RubInMealsDTO getRubInMealsById(Long id) {
+    return rubRepository.findRubById(id)
+        .map(dtoConvertService::rubInMealsToDTO)
+        .orElseThrow(() -> new RubNotFoundException(id));
   }
 }

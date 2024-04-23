@@ -1,7 +1,9 @@
 package com.fireitup.grillhub.services;
 
+import com.fireitup.grillhub.dtos.MealDTO;
 import com.fireitup.grillhub.dtos.MealToPostDTO;
 import com.fireitup.grillhub.entities.Meal;
+import com.fireitup.grillhub.exceptions.MealNotFoundException;
 import com.fireitup.grillhub.repositories.MealRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -24,5 +26,12 @@ public class MealServiceImpl implements MealService {
       allMealsDTO.add(dtoConvertService.mealToPostToDTO(meal));
     }
     return allMealsDTO;
+  }
+
+  @Override
+  public MealDTO getMealById(Long id) {
+    return mealRepository.findMealById(id)
+        .map(dtoConvertService::mealToDTO)
+        .orElseThrow(() -> new MealNotFoundException(id));
   }
 }

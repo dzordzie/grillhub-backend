@@ -8,9 +8,15 @@ public interface DTOConvertService {
 
   RubDTO rubToDTO(Rub rub);
 
+  RubInMealsDTO rubInMealsToDTO(Rub rub);
+
   MeatDTO meatToDTO(Meat meat);
 
   SpiceDTO spiceToDTO(Spice spice);
 
   MealToPostDTO mealToPostToDTO(Meal meal);
+
+  MealDTO mealToDTO(Meal meal);
+
+  MealNameAndIdDTO mealNameAndIdToDTO(Meal meal);
 }

@@ -35,13 +35,24 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .build();
   }
 
+  @Override
+  public RubInMealsDTO rubInMealsToDTO(Rub rub) {
+    if (rub == null) {
+      throw new IllegalArgumentException("Rub cannot be null");
+    }
+    return RubInMealsDTO.builder()
+        .name(rub.getName())
+        .createdByUser(userToDTO(rub.getCreatedBy()))
+        .meals(setOfMealNameAndIdToDTO(rub.getMeals()))
+        .build();
+  }
+
 
   public MeatDTO meatToDTO(Meat meat) {
     if (meat == null) {
       throw new IllegalArgumentException("Meat cannot be null");
     }
     return MeatDTO.builder()
-        .id(meat.getId())
         .typeOfCut(meat.getTypeOfCut())
         .weightInGrams(meat.getWeightInGrams())
         .internalTemp(meat.getInternalTemp())
@@ -56,13 +67,13 @@ public class DTOConvertServiceImpl implements DTOConvertService {
       throw new IllegalArgumentException("Spice cannot be null");
     }
     return SpiceDTO.builder()
-        .id(spice.getId())
         .name(spice.getName())
+        .weightInGrams(spice.getWeightInGrams())
         .build();
   }
 
 
-  public Set<SpiceDTO> spiceSetToDTO(Set<Spice> spices){
+  public Set<SpiceDTO> spiceSetToDTO(Set<Spice> spices) {
     if (spices.isEmpty()) {
       throw new IllegalArgumentException("Spices cannot be empty");
     }
@@ -71,6 +82,17 @@ public class DTOConvertServiceImpl implements DTOConvertService {
       spicesDTO.add(spiceToDTO(spice));
     }
     return spicesDTO;
+  }
+
+  public Set<MealNameAndIdDTO> setOfMealNameAndIdToDTO(Set<Meal> meals) {
+    if (meals.isEmpty()) {
+      throw new IllegalArgumentException("Meals cannot be empty");
+    }
+    Set<MealNameAndIdDTO> mealNameAndIdDTO = new HashSet<>();
+    for (Meal meal : meals) {
+      mealNameAndIdDTO.add(this.mealNameAndIdToDTO(meal));
+    }
+    return mealNameAndIdDTO;
   }
 
 
@@ -88,5 +110,31 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .build();
   }
 
+  @Override
+  public MealDTO mealToDTO(Meal meal) {
+    if (meal == null) {
+      throw new IllegalArgumentException("Meal cannot be null");
+    }
+    return MealDTO.builder()
+        .name(meal.getName())
+        .description(meal.getDescription())
+        .meat(meatToDTO(meal.getMeat()))
+        .rub(rubToDTO(meal.getRub()))
+        .createdByUser(userToDTO(meal.getCreatedBy()))
+        .createdAt(meal.getFormattedCreatedAt())
+        .build();
+  }
+
+  @Override
+  public MealNameAndIdDTO mealNameAndIdToDTO(Meal meal) {
+    if (meal == null) {
+      throw new IllegalArgumentException("Meal cannot be null");
+    }
+    return MealNameAndIdDTO.builder()
+        .id(meal.getId())
+        .name(meal.getName())
+        .createdByUser(userToDTO(meal.getCreatedBy()))
+        .build();
+  }
 
 }
