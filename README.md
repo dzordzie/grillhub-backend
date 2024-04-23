@@ -21,10 +21,7 @@
   
   <br>
 
-  <strong>Become a Grill Guru:<strong/>
-
-  <br>
-  
+  <h3>Become a Grill Guru:</h3>
 - Sign up with a secure password.
 - Dive into a world of recipes – create detailed posts featuring your grilling masterpieces.
 - Craft mouthwatering rubs with customizable spice options.
