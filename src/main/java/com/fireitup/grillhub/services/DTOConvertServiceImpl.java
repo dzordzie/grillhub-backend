@@ -22,6 +22,29 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .build();
   }
 
+  @Override
+  public UserProfileDTO userToUserProfileDTO(User user) {
+    if (user == null) {
+      throw new IllegalArgumentException("User cannot be null");
+    }
+    return UserProfileDTO.builder()
+        .email(user.getEmail())
+        .userPosts(userToUserPostsDTO(user))
+        .build();
+  }
+
+  @Override
+  public UserPostsDTO userToUserPostsDTO(User user) {
+    if (user == null) {
+      throw new IllegalArgumentException("User cannot be null");
+    }
+    return UserPostsDTO.builder()
+        .username(user.getUsername())
+        .rubs(setOfRubNameAndIdToDTO(user.getRubs()))
+        .meals(setOfMealNameAndIdToDTO(user.getMeals()))
+        .build();
+  }
+
 
   public RubDTO rubToDTO(Rub rub) {
     if (rub == null) {
@@ -36,6 +59,17 @@ public class DTOConvertServiceImpl implements DTOConvertService {
   }
 
   @Override
+  public RubNameAndIdDTO rubToNameAndIdDTO(Rub rub) {
+    if (rub == null) {
+      throw new IllegalArgumentException("Rub cannot be null");
+    }
+    return RubNameAndIdDTO.builder()
+        .id(rub.getId())
+        .name(rub.getName())
+        .build();
+  }
+
+  @Override
   public RubInMealsDTO rubInMealsToDTO(Rub rub) {
     if (rub == null) {
       throw new IllegalArgumentException("Rub cannot be null");
@@ -44,8 +78,16 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .name(rub.getName())
         .createdByUser(userToDTO(rub.getCreatedBy()))
         .spices(spiceSetToDTO(rub.getSpices()))
-        .meals(setOfMealNameAndIdToDTO(rub.getMeals()))
+        .meals(setOfMealNameIdUserToDTO(rub.getMeals()))
         .build();
+  }
+
+  public Set<RubNameAndIdDTO> setOfRubNameAndIdToDTO(Set<Rub> rubs) {
+    Set<RubNameAndIdDTO> rubNameAndIdDTO = new HashSet<>();
+    for (Rub rub : rubs) {
+      rubNameAndIdDTO.add(this.rubToNameAndIdDTO(rub));
+    }
+    return rubNameAndIdDTO;
   }
 
 
@@ -86,14 +128,22 @@ public class DTOConvertServiceImpl implements DTOConvertService {
   }
 
   public Set<MealNameAndIdDTO> setOfMealNameAndIdToDTO(Set<Meal> meals) {
+    Set<MealNameAndIdDTO> mealNameAndIdDTO = new HashSet<>();
+    for (Meal meal : meals) {
+      mealNameAndIdDTO.add(this.mealToNameAndIdDTO(meal));
+    }
+    return mealNameAndIdDTO;
+  }
+
+  public Set<MealNameIdUserDTO> setOfMealNameIdUserToDTO(Set<Meal> meals) {
     if (meals.isEmpty()) {
       throw new IllegalArgumentException("Meals cannot be empty");
     }
-    Set<MealNameAndIdDTO> mealNameAndIdDTO = new HashSet<>();
+    Set<MealNameIdUserDTO> mealNameIdUserDTO = new HashSet<>();
     for (Meal meal : meals) {
-      mealNameAndIdDTO.add(this.mealNameAndIdToDTO(meal));
+      mealNameIdUserDTO.add(this.mealNameAndIdToDTO(meal));
     }
-    return mealNameAndIdDTO;
+    return mealNameIdUserDTO;
   }
 
 
@@ -127,11 +177,22 @@ public class DTOConvertServiceImpl implements DTOConvertService {
   }
 
   @Override
-  public MealNameAndIdDTO mealNameAndIdToDTO(Meal meal) {
+  public MealNameAndIdDTO mealToNameAndIdDTO(Meal meal) {
     if (meal == null) {
       throw new IllegalArgumentException("Meal cannot be null");
     }
     return MealNameAndIdDTO.builder()
+        .id(meal.getId())
+        .name(meal.getName())
+        .build();
+  }
+
+  @Override
+  public MealNameIdUserDTO mealNameAndIdToDTO(Meal meal) {
+    if (meal == null) {
+      throw new IllegalArgumentException("Meal cannot be null");
+    }
+    return MealNameIdUserDTO.builder()
         .id(meal.getId())
         .name(meal.getName())
         .createdByUser(userToDTO(meal.getCreatedBy()))
