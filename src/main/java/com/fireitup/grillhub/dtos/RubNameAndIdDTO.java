@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MealNameAndIdDTO {
+public class RubNameAndIdDTO {
   private Long id;
   private String name;
 }
