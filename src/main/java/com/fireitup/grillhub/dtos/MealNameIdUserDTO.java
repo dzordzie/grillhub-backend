@@ -5,15 +5,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RubInMealsDTO {
+public class MealNameIdUserDTO {
+  private Long id;
   private String name;
   private UserDTO createdByUser;
-  private Set<SpiceDTO> spices;
-  private Set<MealNameIdUserDTO> meals;
 }
