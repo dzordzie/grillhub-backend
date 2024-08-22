@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class MealDTO {
   private String name;
   private String description;
+  private String imageBase64;
   private MeatDTO meat;
   private RubDTO rub;
   private UserDTO createdByUser;

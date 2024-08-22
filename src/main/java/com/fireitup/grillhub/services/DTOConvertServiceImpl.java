@@ -100,7 +100,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .weightInGrams(meat.getWeightInGrams())
         .internalTemp(meat.getInternalTemp())
         .ambientTemp(meat.getAmbientTemp())
-        .meatType(meat.getMeatType())
+        .meatType(meat.getMeatType().name())
         .build();
   }
 
@@ -137,7 +137,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
 
   public Set<MealNameIdUserDTO> setOfMealNameIdUserToDTO(Set<Meal> meals) {
     if (meals.isEmpty()) {
-      throw new IllegalArgumentException("Meals cannot be empty");
+      throw new IllegalArgumentException("This Rub was not in season yet");
     }
     Set<MealNameIdUserDTO> mealNameIdUserDTO = new HashSet<>();
     for (Meal meal : meals) {
@@ -155,6 +155,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
         .id(meal.getId())
         .name(meal.getName())
         .description(meal.getDescription())
+        .imageBase64(meal.getImageBase64())
         .meatType(meatToDTO(meal.getMeat()).getMeatType().toString())
         .createdByUser(userToDTO(meal.getCreatedBy()))
         .createdAt(meal.getFormattedCreatedAt())
@@ -169,6 +170,7 @@ public class DTOConvertServiceImpl implements DTOConvertService {
     return MealDTO.builder()
         .name(meal.getName())
         .description(meal.getDescription())
+        .imageBase64(meal.getImageBase64())
         .meat(meatToDTO(meal.getMeat()))
         .rub(rubToDTO(meal.getRub()))
         .createdByUser(userToDTO(meal.getCreatedBy()))

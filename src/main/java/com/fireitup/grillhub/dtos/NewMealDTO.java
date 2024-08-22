@@ -9,12 +9,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MealToPostDTO {
-  private Long id;
+public class NewMealDTO {
   private String name;
   private String description;
   private String imageBase64;
-  private String meatType;
-  private UserDTO createdByUser;
-  private String createdAt;
+  private MeatDTO meat;
+  private RubDTO rub;
+
 }

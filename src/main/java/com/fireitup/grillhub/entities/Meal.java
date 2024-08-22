@@ -36,7 +36,18 @@ public class Meal {
   @JoinColumn(name = "user_id")
   private User createdBy;
 
-  private LocalDateTime createdAt = LocalDateTime.now();
+  @Lob
+  @Column(columnDefinition="MEDIUMTEXT")
+  private String imageBase64;
+
+  private LocalDateTime createdAt;
+
+  @PrePersist
+  protected void onCreate() {
+    if (createdAt == null) {
+      createdAt = LocalDateTime.now();
+    }
+  }
 
   public String getFormattedCreatedAt() {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd. MMMM yyyy - HH:mm");

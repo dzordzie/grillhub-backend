@@ -22,9 +22,9 @@ public class UserController {
   @GetMapping("/profile")
   public ResponseEntity<UserProfileDTO> getUserProfile(@AuthenticationPrincipal User user) {
     if (user == null) {
-      ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
-    assert user != null;
+
     return ResponseEntity.ok().body(userService.getUserProfileById(user.getId()));
   }
 

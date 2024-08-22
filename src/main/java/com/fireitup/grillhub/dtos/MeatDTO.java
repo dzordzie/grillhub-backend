@@ -17,6 +17,5 @@ public class MeatDTO {
   private Integer weightInGrams;
   private Integer internalTemp;
   private Integer ambientTemp;
-  @Enumerated(EnumType.STRING)
-  private MeatType meatType;
+  private String meatType;
 }

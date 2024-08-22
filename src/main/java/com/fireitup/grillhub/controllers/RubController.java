@@ -1,7 +1,6 @@
 package com.fireitup.grillhub.controllers;
 
 import com.fireitup.grillhub.dtos.ErrorMessageDTO;
-import com.fireitup.grillhub.dtos.RubDTO;
 import com.fireitup.grillhub.exceptions.RubNotFoundException;
 import com.fireitup.grillhub.services.RubService;
 import lombok.RequiredArgsConstructor;
@@ -10,18 +9,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequiredArgsConstructor
 public class RubController {
 
   private final RubService rubService;
-
-  @GetMapping("/rubs")
-  public ResponseEntity<List<RubDTO>> allRubs() {
-    return ResponseEntity.ok().body(rubService.getAllRubs());
-  }
 
   @GetMapping("/rub/{id}")
   public ResponseEntity getRubInMeals(@PathVariable Long id) {
