@@ -26,7 +26,7 @@ public class RegisterRequestDTO {
   private String email;
 
   @Pattern(
-      regexp = "^(?=.*[A-Z].*[A-Z])(?=.*\\d.*\\d)(?=.*[!@#$%^&*].*[!@#$%^&*])(?!.*\\s).{8,16}$",
+      regexp = "^(?=.*[A-Z].*[A-Z])(?=.*\\d.*\\d)(?=.*[!@#$%^&*-,.\\.].*[!@#$%^&*-,.\\.])(?!.*\\s).{8,16}$",
       message = "Invalid password format"
   )
   private String password;
